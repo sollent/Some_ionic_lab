@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let d of data">
+    <ion-title padding>{{d.name}}</ion-title>
+    <ion-card-content><h4>Category: {{d.category}}</h4></ion-card-content>
+    <!--<img src="../../assets/imgs/card-amsterdam.png"/>-->
+    <!--<ion-fab right top>-->
+      <!--<button ion-fab color="red">-->
+        <!--<ion-icon name="pin"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-fab>-->
+
+    <ion-item>
+      <ion-icon name="ios-text-outline" item-start large></ion-icon>
+      <h2>{{d.comment.author}}</h2>
+      <p>{{d.comment.text}}</p>
+      <p>Rating: {{d.comment.rating}}</p>
+    </ion-item>
+    <ion-card-content>
+      <p>{{d.description}}</p>
+    </ion-card-content>
+    <ion-item>
+      <span item-left>{{d.label}}</span>
+      <button ion-button color="red" icon-left clear item-end>
+        <ion-icon name="navigate" ></ion-icon>
+        {{d.price}}
+      </button>
+    </ion-item>
+
+  </ion-card>
+
+</ion-content>

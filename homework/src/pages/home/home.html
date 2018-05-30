@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button full color="light" (click)="getData()">Взять данные</button>
+  <button ion-button full color="light" (click)="saveData()">Сохранить</button>
+  <button ion-button full color="light" (click)="loadData()">Показать</button>
+  <button ion-button full (click)="deleteData()" color="danger">Delete</button>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <h3>{{item.name}}</h3>
+      <p>{{item.information.description}}</p>
+    </ion-item>
+  </ion-list>
+
+  <form [formGroup]="todo" (ngSubmit)="save()">
+    <ion-item>
+      <ion-label floating>Your name</ion-label>
+      <ion-input type="text" formControlName="name" clearInput></ion-input>
+
+    </ion-item>
+    <button ion-button type="submit" color="secondary" full>Сохранить</button>
+  </form>
+  <button ion-button full (click)="getPost()">Показать</button>
+  <button ion-button full color="danger" (click)="Remove()" >Удалить</button>
+  <ion-card>{{Data}}</ion-card>
+</ion-content>

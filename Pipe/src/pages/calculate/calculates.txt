@@ -1,0 +1,18 @@
+<ion-header xmlns="http://www.w3.org/1999/html">
+  <ion-navbar>
+    <ion-title>
+      Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="page1">
+  <p>Usage: </p>
+  <div>First number: <ion-input [(ngModel)]="power"></ion-input></div>
+  <div>Second number: <ion-input [(ngModel)]="factor"></ion-input></div>
+  <p>
+    Sum of numbers: {{power| myBoost:factor}}
+  </p>
+  <p>Second pipe.</p>
+    <p>Change : {{"Anybody else here"|mada}}</p>
+</ion-content>
